@@ -56,7 +56,7 @@ char readChar() {
     return value;
 }
 
-int readFloat() {
+float readFloat() {
     float value;
 
     scanf("%f", &value);

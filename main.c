@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <locale.h>
 #include "src/menu.h"
 
 int main() {

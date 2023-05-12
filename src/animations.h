@@ -4,18 +4,18 @@
 
 #include "libs/utils.h"
 
-
+#ifndef ANIMATIONS
+#define ANIMATIONS
 
 const char menuMessages[][50] = { "1- Calcular cedulas e moedas",
                                    "2- Verificar numero primo",
-                                   "3- Converter binario",
-                                   "4- Calcular divisores",
-                                   "5- Calcular potencia",
-                                   "6- Calcular Fibonacci",
-                                   "7- Calcular media",
-                                   "8- Descobrir maior salario",
-                                   "9- Calcular tempo para ultrapassar populacao",
-                                   "10- Jogo dos copos"
+                                   "3- Calcular divisores",
+                                   "4- Calcular potencia",
+                                   "5- Calcular Fibonacci",
+                                   "6- Calcular media",
+                                   "7- Descobrir maior salario",
+                                   "8- Calcular tempo para ultrapassar populacao",
+                                   "9- Jogo dos copos"
                                    };
 const char defaultSeparator[] = "---------------------------------------";
 
@@ -33,7 +33,7 @@ void animatedMenuMessage() {
     separator();
     printf("\nCarregando...\n\n");
 
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 9; i++) {
         char* currentMessage = menuMessages[i];
 
         animatePrintf(currentMessage);
@@ -43,3 +43,5 @@ void animatedMenuMessage() {
     printf("\n");
     separator();
 }
+
+#endif //ANIMATIONS
