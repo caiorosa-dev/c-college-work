@@ -18,6 +18,9 @@ const char menuMessages[][50] = { "1- Calcular cedulas e moedas",
                                    "9- Jogo dos copos"
                                    };
 const char defaultSeparator[] = "---------------------------------------";
+const char loadingBashAnimation[] = {
+        '-', '\\', '|', '/'
+};
 
 void separator() {
     printf(defaultSeparator);
@@ -28,6 +31,16 @@ void nextLine()
     printf("\n\n");
 }
 
+int currentBashFrame = 0;
+
+char getLoadingChar() {
+    currentBashFrame++;
+    if (currentBashFrame > 3) {
+        currentBashFrame = 0;
+    }
+
+    return loadingBashAnimation[currentBashFrame];
+}
 
 void animatedMenuMessage() {
     separator();

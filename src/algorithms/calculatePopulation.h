@@ -4,18 +4,47 @@
 
 #include <stdio.h>
 
+const int speedToUpdateYear = 6;
+
 void calculatePopulation() {
     float cityAPopulation = 5000000.0f;
     float cityBPopulation = 7000000.0f;
     float cityAGrowthRate = 0.03f;
     float cityBGrowthRate = 0.02f;
+
     int years = 0;
+    int frame = 0;
 
     while (cityAPopulation < cityBPopulation) {
+        char loadingChar = getLoadingChar();
+
+        separator();
+        nextLine();
+        printf("%c Ano atual: %d.", loadingChar, years);
+        printf("\n\nTaxa de Natalidade A: %.0f%%.\nTaxa de Natalidade B: %.0f%%.", cityAGrowthRate * 100, cityBGrowthRate * 100);
+        printf("\n\nPopulacao A: %.1f.\nPopulacao B: %.1f.", cityAPopulation, cityBPopulation);
+        nextLine();
+        separator();
+
+        sleepMs(125);
+        clearTerminal();
+
+        frame++;
+        if (frame > speedToUpdateYear) {
+            frame = 0;
+        }
+
+        if (frame != 0) continue;
+
         cityAPopulation += cityAPopulation * cityAGrowthRate;
         cityBPopulation += cityBPopulation * cityBGrowthRate;
         years++;
     }
 
-    printf("Anos: %d", years);
+    clearTerminal();
+    separator();
+    nextLine();
+    printf("Finalizado! Anos totais: %d.", years);
+    printf("\n\nTaxa de Natalidade A: %.0f%%.\nTaxa de Natalidade B: %.0f%%.", cityAGrowthRate * 100, cityBGrowthRate * 100);
+    printf("\n\nPopulacao A: %.1f.\nPopulacao B: %.1f.", cityAPopulation, cityBPopulation);
 }
