@@ -7,6 +7,11 @@
 const int speedToUpdateYear = 6;
 
 void calculatePopulation() {
+    separator();
+    printf("\n\nOla, para comecar basta apertar o botao ENTER!\n\n");
+    separator();
+    readChar();
+
     float cityAPopulation = 5000000.0f;
     float cityBPopulation = 7000000.0f;
     float cityAGrowthRate = 0.03f;
