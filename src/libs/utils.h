@@ -33,6 +33,14 @@ int sleepMs(long milliseconds)
     return res;
 }
 
+int randomNumber(int maxNumber) {
+    srand(time(NULL));
+
+    int random = rand() % (maxNumber + 1);
+
+    return random;
+}
+
 void animatePrintf(const char string[]) {
     sleepMs(250);
     printf("%s", string);
@@ -52,6 +60,15 @@ char readChar() {
 
     scanf("%c", &value);
     fflush(stdin);
+
+    return value;
+}
+
+char* readString() {
+    char *value = malloc(50 * sizeof(char));
+
+    fgets(value, sizeof(value), stdin);
+    value[strcspn(value, "\n")] = 0;
 
     return value;
 }
