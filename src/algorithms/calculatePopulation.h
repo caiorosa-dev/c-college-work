@@ -21,8 +21,8 @@ void calculatePopulation() {
         separator();
         nextLine();
         printf("%c Ano atual: %d.", loadingChar, years);
-        printf("\n\nTaxa de Natalidade A: %.0f%%.\nTaxa de Natalidade B: %.0f%%.", cityAGrowthRate * 100, cityBGrowthRate * 100);
-        printf("\n\nPopulacao A: %.1f.\nPopulacao B: %.1f.", cityAPopulation, cityBPopulation);
+        printf("\n\nTaxa de Natalidade A: %.0f%% ao ano.\nTaxa de Natalidade B: %.0f%% ao ano.", cityAGrowthRate * 100, cityBGrowthRate * 100);
+        printf("\n\nPopulacao A: %.0f pessoas.\nPopulacao B: %.0f pessoas.", cityAPopulation, cityBPopulation);
         nextLine();
         separator();
 
