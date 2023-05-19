@@ -1,8 +1,7 @@
 #include "src/menu.h"
 
 int main() {
-//    menu();
-    executeCupPlay();
+    menu();
 
     return 0;
 }
