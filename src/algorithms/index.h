@@ -7,6 +7,7 @@
 
 #include "calculateMoney.h"
 #include "calculatePopulation.h"
+#include "cupPlay.h"
 
 const int algorithmsAmount = 9;
 
@@ -17,6 +18,9 @@ void runAlgorithm(int id) {
             break;
         case 8:
             calculatePopulation();
+            break;
+        case 9:
+            executeCupPlay();
             break;
     }
 }
