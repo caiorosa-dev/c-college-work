@@ -46,8 +46,8 @@ void calculateMoney() {
             number -= value;
 
             char* name = coinTypesNames[i];
-            printf("\n * ");
-            animatePrintf(name);
+            animatePrintf("\n * ");
+            printf(name);
         }
     } while (number > 0.01);
 
