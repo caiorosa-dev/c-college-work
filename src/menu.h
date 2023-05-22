@@ -11,7 +11,6 @@
 #include "animations.h"
 
 const char menuMessage[] = "\nCarregamento Finalizado.\n\n1- Calcular cedulas e moedas\n2- Verificar numero primo\n3- Calcular divisores\n4- Calcular potencia\n5- Calcular Fibonacci\n6- Calcular media das notas\n7- Descobrir maior salario\n8- Calcular tempo para ultrapassar populacao\n9- Jogo dos copos\n0- Sair\n\n";
-const char goodbyeMessage[] = "Muito obrigado por usar nosso software!";
 
 /*
  * Utility functions
@@ -74,8 +73,7 @@ void menu() {
         executeFunction(option);
     }
 
-    clearTerminal();
-    printf(goodbyeMessage);
+    animatedGoodbyeMessage();
 }
 
 #endif //SECOND_WORK_MENU_H

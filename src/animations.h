@@ -7,7 +7,7 @@
 #ifndef ANIMATIONS
 #define ANIMATIONS
 
-const char menuMessages[][50] = { "1- Calcular cedulas e moedas",
+const char menuMessageLines[][50] = { "1- Calcular cedulas e moedas",
                                    "2- Verificar numero primo",
                                    "3- Calcular divisores",
                                    "4- Calcular potencia",
@@ -18,6 +18,26 @@ const char menuMessages[][50] = { "1- Calcular cedulas e moedas",
                                    "9- Jogo dos copos",
                                    "0- Sair"
                                    };
+
+const char goodbyeMessageLines[][70] = { "--------------------------------------",
+                                  "",
+                                  "Muito obrigado por usar o nosso software!",
+                                  "",
+                                  "Desenvolvido por:",
+                                  "- Caio Furtado Rosa (https://caiorosadev.com)",
+                                  "   * Menu",
+                                  "   * Libs",
+                                  "   * Exercicios 1, 8 e 9.",
+                                  "",
+                                  "- Gabriel Silveira",
+                                  "   * Exercicios 3, 5 e 7.",
+                                  "",
+                                  "- Guilherme Silvestre da Rosa",
+                                  "   * Exercicios 2, 4 e 6.",
+                                  "",
+                                  "--------------------------------------"
+};
+
 const char defaultSeparator[] = "---------------------------------------";
 const char loadingBashAnimation[] = {
         '-', '\\', '|', '/'
@@ -43,12 +63,35 @@ char getLoadingChar() {
     return loadingBashAnimation[currentBashFrame];
 }
 
+void printGoodbyeMessage(int linesToRender, int lines) {
+    int spacedLines = lines - linesToRender;
+
+    for (int i = 0; i < spacedLines; ++i) {
+        printf("\n");
+    }
+
+    for (int i = 0; i < linesToRender; ++i) {
+        printf("%s", goodbyeMessageLines[i]);
+        printf("\n");
+    }
+}
+
+void animatedGoodbyeMessage() {
+    const int totalLines = 17;
+
+    for (int i = 1; i <= totalLines; ++i) {
+        clearTerminal();
+        printGoodbyeMessage(i, totalLines);
+        sleepMs(300);
+    }
+}
+
 void animatedMenuMessage() {
     separator();
     printf("\nCarregando...\n\n");
 
     for (int i = 0; i < 11; i++) {
-        char* currentMessage = menuMessages[i];
+        char* currentMessage = menuMessageLines[i];
 
         animatePrintf(currentMessage);
         printf("\n");
