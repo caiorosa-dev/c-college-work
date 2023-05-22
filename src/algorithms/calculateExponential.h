@@ -9,11 +9,11 @@
 
 void calculateExponential() {
     int numero;
-    printf("Digite um número: ");
+    printf("Digite um numero: ");
     scanf("%d",&numero);
 
     int expoente;
-    printf("Digite o número do expoente: ");
+    printf("Digite o numero do expoente: ");
     scanf("%d",&expoente);
 
     int resultado = 1;
@@ -23,7 +23,7 @@ void calculateExponential() {
         i++;
     }
 
-    printf("O resultado é: %d", resultado);
+    printf("Resultado: %d", resultado);
 }
 
 #endif //SECOND_WORK_CALCULATEEXPONENTIAL_H

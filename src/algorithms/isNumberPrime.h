@@ -10,22 +10,23 @@
 void isNumberPrime() {
     int numero;
 
-    printf("Digite um número: ");
+    printf("Digite um numero: ");
     scanf("%d",&numero);
 
     int quantidadeDeNumerosDivisiveis = 0;
 
+    printf("\n");
     for(int numeroSendoDividendo = 2;numeroSendoDividendo < numero; numeroSendoDividendo++){
         if(numero % numeroSendoDividendo == 0){
             quantidadeDeNumerosDivisiveis += 1;
-            printf("É divisivel por: %d\n", numeroSendoDividendo);
+            printf("Divisivel por: %d\n", numeroSendoDividendo);
         }
     }
 
     if(quantidadeDeNumerosDivisiveis == 0){
-        printf("\nEsse número é primo! ");
+        printf("\nEsse numero e primo! ");
     } else{
-        printf("\nEsse número não é primo! ");
+        printf("\nEsse numero nao e primo! ");
     }
 }
 
