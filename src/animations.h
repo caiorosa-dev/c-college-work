@@ -19,9 +19,10 @@ const char menuMessageLines[][50] = { "1- Calcular cedulas e moedas",
                                    "0- Sair"
                                    };
 
-const char goodbyeMessageLines[][70] = { "--------------------------------------",
+const char goodbyeMessageLines[][90] = { "--------------------------------------",
                                   "",
                                   "Muito obrigado por usar o nosso software!",
+                                  "O codigo-fonte esta disponivel em: https://github.com/caiorosa-dev/c-college-work",
                                   "",
                                   "Desenvolvido por:",
                                   "- Caio Furtado Rosa (https://caiorosadev.com)",
@@ -77,7 +78,7 @@ void printGoodbyeMessage(int linesToRender, int lines) {
 }
 
 void animatedGoodbyeMessage() {
-    const int totalLines = 17;
+    const int totalLines = 18;
 
     for (int i = 1; i <= totalLines; ++i) {
         clearTerminal();

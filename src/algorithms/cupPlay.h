@@ -269,7 +269,7 @@ void executeCupPlay() {
             if (win)
                 printf("A moeda estava no lugar correto!\n\nParabens %s!", playerName);
             else
-                printf("A moeda estava no lugar errado :(\n\nA banca (PC) ganhou! Fica para a próxima %s :(", playerName);
+                printf("A moeda estava no lugar errado :(\n\nA banca (PC) ganhou! Fica para a proxima %s :(", playerName);
 
             return;
         }
