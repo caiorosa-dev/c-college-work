@@ -15,7 +15,8 @@ const char menuMessages[][50] = { "1- Calcular cedulas e moedas",
                                    "6- Calcular media",
                                    "7- Descobrir maior salario",
                                    "8- Calcular tempo para ultrapassar populacao",
-                                   "9- Jogo dos copos"
+                                   "9- Jogo dos copos",
+                                   "0- Sair"
                                    };
 const char defaultSeparator[] = "---------------------------------------";
 const char loadingBashAnimation[] = {
@@ -46,7 +47,7 @@ void animatedMenuMessage() {
     separator();
     printf("\nCarregando...\n\n");
 
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 11; i++) {
         char* currentMessage = menuMessages[i];
 
         animatePrintf(currentMessage);
