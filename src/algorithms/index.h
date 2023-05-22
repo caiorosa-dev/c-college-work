@@ -13,6 +13,7 @@
 #include "calculateExponential.h"
 #include "calculateDividers.h"
 #include "selectHighestSalary.h"
+#include "calculateAverageGrades.h"
 
 const int algorithmsAmount = 9;
 
@@ -32,6 +33,9 @@ void runAlgorithm(int id) {
             break;
         case 5:
             calculateFibonacci();
+            break;
+        case 6:
+            calculateAverageGrades();
             break;
         case 7:
             selectHighestSalary();
