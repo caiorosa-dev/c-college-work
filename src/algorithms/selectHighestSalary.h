@@ -8,13 +8,13 @@
 #include <stdio.h>
 
 void selectHighestSalary() {
-    int salario;
-    int maiorsalario;
+    float salario;
+    float maiorsalario;
     int numMaiorPessoa;
 
     printf("Escreva o seu salario, digite 0 quando quiser terminar.");
-    printf("\nSeu salário: ");
-    scanf("%d", &salario);
+    printf("\nSeu salario: ");
+    scanf("%f", &salario);
     printf("\n");
 
     maiorsalario=salario;
@@ -23,7 +23,7 @@ void selectHighestSalary() {
     int i=2;
     while(salario != 0){
         printf("Escreva o proximo salario: ");
-        scanf("%d", &salario);
+        scanf("%f", &salario);
 
         if(salario>maiorsalario){
             maiorsalario=salario;
@@ -33,7 +33,7 @@ void selectHighestSalary() {
         i++;
     }
     printf("\nO maior salario pertence a pessoa numero %d.\n", numMaiorPessoa);
-    printf("Com o salario de: %d.", maiorsalario);
+    printf("Com o salario de: %.2f.", maiorsalario);
 }
 
 #endif //SECOND_WORK_SELECTHIGHESTSALARY_H

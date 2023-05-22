@@ -18,6 +18,7 @@ void calculateAverageGrades() {
     float soma = 0.0f;
     float resultado;
 
+    printf("\n");
     for(int i = 1; i <= alunos; i++){
         printf("Digite a nota do aluno %d: ", i);
         scanf("%f",&nota);
@@ -27,7 +28,7 @@ void calculateAverageGrades() {
     }
 
     resultado = soma / alunos;
-    printf("A média dos alunos é: %.2f", resultado);
+    printf("\nA media dos alunos e: %.2f", resultado);
 }
 
 
