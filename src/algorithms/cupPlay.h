@@ -146,8 +146,7 @@ void renderCups(bool showWhereIs) {
  */
 
 void executeCupPlay() {
-    separator();
-    printf("\n\nOla! Primeiro, informe se quer jogar em 1 ou 2 jogadores.\n\n> ");
+    printf("Ola! Primeiro, informe se quer jogar em 1 ou 2 jogadores.\n\n> ");
 
     bool isTwoPlayers = readChar() == '2';
     clearTerminal();

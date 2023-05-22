@@ -7,8 +7,7 @@
 const int speedToUpdateYear = 6;
 
 void calculatePopulation() {
-    separator();
-    printf("\n\nOla, para comecar basta apertar o botao ENTER!\n\n");
+    printf("Ola, para comecar basta apertar o botao ENTER!\n\n");
     separator();
     readChar();
 

@@ -21,8 +21,7 @@ const char coinTypesNames[][20] = { "Cedula R$100",
                                     };
 
 void calculateMoney() {
-    separator();
-    animatePrintf("\n\nInforme a quantia a ser processado abaixo!\n\n");
+    animatePrintf("Informe a quantia a ser processado abaixo!\n\n");
     separator();
     animatePrintf("\n\nQuantia para processamento: ");
     float number = readFloat();

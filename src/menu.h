@@ -19,6 +19,9 @@ const char goodbyeMessage[] = "Muito obrigado por usar nosso software!";
 
 void executeFunction(int option) {
     clearTerminal();
+    separator();
+    nextLine();
+
     runAlgorithm(option);
 
     nextLine();
