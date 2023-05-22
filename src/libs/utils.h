@@ -49,8 +49,8 @@ void animatePrintf(const char string[]) {
 int readInt() {
     int value;
 
-    scanf("%d", &value);
     fflush(stdin);
+    scanf("%d", &value);
 
     return value;
 }
@@ -58,8 +58,8 @@ int readInt() {
 char readChar() {
     char value;
 
-    scanf("%c", &value);
     fflush(stdin);
+    scanf("%c", &value);
 
     return value;
 }
@@ -76,8 +76,8 @@ char* readString() {
 float readFloat() {
     float value;
 
-    scanf("%f", &value);
     fflush(stdin);
+    scanf("%f", &value);
 
     return value;
 }
